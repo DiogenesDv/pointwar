@@ -190,7 +190,7 @@
         class MenuJogo {
             constructor() {
                 this.numBonecos = 8;
-                this.tempoTiro = 15;
+                this.tempoTiro = 10;
             }
 
             exibir() {
@@ -220,7 +220,7 @@
 
                             <div>
                                 <label class="block text-slate-400 text-sm font-semibold mb-2 uppercase tracking-wider">
-                                    Tempo por Tiro (15s a 25s):<br>
+                                    Tempo por Tiro (10s a 15s):<br>
                                     <span id="valTempo" class="text-amber-400 font-black text-2xl">${this.tempoTiro}s</span>
                                 </label>
                                 <div class="flex items-center justify-center gap-4">
@@ -256,14 +256,14 @@
                 });
 
                 document.getElementById('btnMenosTempo').addEventListener('click', () => {
-                    if (this.tempoTiro > 15) {
+                    if (this.tempoTiro > 10) {
                         this.tempoTiro--;
                         document.getElementById('valTempo').innerText = this.tempoTiro + 's';
                     }
                 });
 
                 document.getElementById('btnMaisTempo').addEventListener('click', () => {
-                    if (this.tempoTiro < 25) {
+                    if (this.tempoTiro < 15) {
                         this.tempoTiro++;
                         document.getElementById('valTempo').innerText = this.tempoTiro + 's';
                     }
@@ -299,8 +299,8 @@
         let animando = false;
         
         let configBonecos = 8;
-        let configTempo = 15;
-        let tempoRestante = 15;
+        let configTempo = 10;
+        let tempoRestante = 10;
         let timerInterval = null;
 
         const CANVAS_WIDTH = 900;
